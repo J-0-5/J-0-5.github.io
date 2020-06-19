@@ -1,0 +1,55 @@
+body{
+    background-image:url(https://media.gettyimages.com/videos/congratulation-party-confetti-with-alpha-channel-video-id536012217?s=640x640) ;
+   
+}
+
+.body1{
+    width: 70%;
+    margin: 0 auto;
+    
+  }
+  .body0{
+      background-color: white;
+  }
+  .tabla th{ 
+       color: deepskyblue;
+               
+    } 
+    
+    h1{
+        color: skyblue;
+    }
+
+    nav{
+      background-color: skyblue;
+      width: 70%;
+      margin: 0 auto;
+   }
+    
+    .menu ul {
+    background-color: skyblue;
+    max-width: 450px; /* ancho maximo de 450px y no sobre pasa eso */
+   margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+    
+   }
+   .menu a:hover{
+    background:deepskyblue;/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+    padding: 5px;
+    border-radius: 3px;
+
+  }
+
+  .menu li {
+    display: inline;
+    
+ }
+  .menu li a{
+    color:white;
+    text-align: left; 
+  }
+  
+  .item {
+    display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
+    text-align: center;
+    padding: 10px; /* Relleno a los 4 lados de los LI */
+ }
