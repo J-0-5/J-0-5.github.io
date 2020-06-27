@@ -1,0 +1,94 @@
+html{
+    position: relative;
+}
+
+h1{
+    color: orangered;
+}
+.body1
+{
+    width: 70%;
+    float: left;
+}
+.enc{
+   color: white;
+   background-color: orangered;
+   width: 100%;
+   border: 1px solid orangered;
+   
+}
+.chatbox{
+    width: 20%;
+    height: 50%;
+    border: 1px solid orangered;
+    max-width: 500;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.bodychat{
+     height: 80%;
+     width: 90%;
+     border: 1px solid orangered;
+     margin: 0 auto;
+}
+.writem {
+    float: right;
+    bottom: 0px;
+    position: absolute;
+   
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none; /* este le coloca a las etiquetas a del html una decoracion null */
+}
+
+nav {
+    padding: 5px;
+    background: rgb(245, 113, 25);
+}
+  
+  .menu {
+  background-color:rgb(245, 113, 25);
+  max-width: 650px; /* ancho maximo de 650px y no sobre pasa eso */
+ margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+  
+ }
+ .menu a:hover{
+  background: rgb(250, 227, 146);/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+  padding: 5px;
+  border-radius: 3px;
+
+}
+
+.menu li {
+  display: inline;
+  
+}
+.menu li a{
+  color:white;
+  text-align: left; 
+}
+
+.item {
+  display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
+  text-align: center;
+  padding: 10px; /* Relleno a los 4 lados de los LI */
+}
+
+body{
+    background-image: url();
+}
+.encabezado img{
+    text-align: center;
+    width: 100%;
+    height: 325px;
+    }

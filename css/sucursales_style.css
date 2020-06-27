@@ -1,0 +1,76 @@
+body{
+   background: url(../img/fondo.jpg) no-repeat center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+ .encabezado img{
+   text-align: center;
+   width: 100%;
+   height: 325px;
+   }
+
+.titulo{
+         
+    color:rgb(245, 113, 25);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table, th, td{ 
+   border: 1px solid indianred; 
+   border-collapse: collapse;
+   text-align: center; 
+}
+
+th{
+    color: tomato;
+    background-color: white;
+
+}
+
+.body1{
+   width: 70%;
+   margin: 0 auto;
+}
+
+nav {
+   padding: 5px;
+   background: rgb(245, 113, 25);
+}
+ 
+ .menu ul {
+ background-color:rgb(245, 113, 25);
+ max-width: 650px; /* ancho maximo de 650px y no sobre pasa eso */
+margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+ 
+}
+.menu a:hover{
+ background: rgb(250, 227, 146);/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+ padding: 5px;
+ border-radius: 3px;
+
+}
+
+.menu li {
+   display: inline;
+   
+}
+ .menu li a{
+   color:white;
+   text-align: left; 
+ }
+ 
+ .item {
+   display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
+   text-align: center;
+   padding: 10px; /* Relleno a los 4 lados de los LI */
+}
+
+footer{
+   text-align: center;
+   background: rgb(245, 113, 25);
+   color: white;
+   margin: 0px;
+}

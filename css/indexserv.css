@@ -1,0 +1,122 @@
+* { /* eso es para agregarle margen y relleno a todo el body */
+    margin: 10;
+    padding: 10;
+}
+
+body{
+    background: url(../img/fondo.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.encabezado img{
+text-align: center;
+width: 100%;
+height: 325px;
+}
+
+ul {
+    list-style-type: none; /*tipo de lista*/
+    margin: 0;/*margen*/
+    padding: 0;/*relleno*/
+    overflow: hidden;/*overflow indica si recortar contenido*/
+    background-color: rgb(245, 113, 25);
+}
+
+a {
+    text-decoration: none; /* este le coloca a las etiquetas a del html una decoracion null */
+}
+
+nav {
+    background: rgb(245, 113, 25);
+}
+
+.menu {
+    max-width: 750px; /* ancho maximo y no sobre pasa eso */
+    margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+}
+
+.item {
+    display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
+    text-align: center;
+    padding: 10px; /* Relleno a los 4 lados de los LI */
+}
+
+.item a {
+    color: white;
+    font-weight: bold; /* fuente en negrita */
+}
+
+.item a:hover {
+    padding: 5px;
+    border-bottom: 2px solid cornsilk;/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+}
+
+h1{
+    color:tomato;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+h2{
+    color: tomato;
+    font-style: italic;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+table.in{  
+    border-collapse: collapse;
+    text-align: center; 
+    border: 1px solid orange;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+}
+
+img.domi{
+    width: 700px;
+    height: 370px;
+    border-radius: 40px;
+}
+
+.ultimo {
+    position: relative; /* posicion relativa padre */
+    padding-left: 30px  ;
+}
+
+.ultimo .parrafo {
+    max-width: 590px;
+    margin-left: 710px;
+}
+
+.ultimo .img {
+    position: absolute; /* position absoluta para moverlo manualmente con el contenedor padre */
+    top: 15px;
+    left: -5px; /* distancia de la izq */
+    padding-right: 55px;
+}
+
+ol{
+    background-color: rgb(255, 229, 172);
+    border-radius: 5px;
+    width: 400px;
+}
+
+ol li{
+    background-color: rgb(255, 229, 172);
+    padding-bottom: 5px;
+}
+
+ol.ex{
+    padding-right: 40px;
+}
+
+footer{
+    text-align: center;
+    background: rgb(245, 113, 25);
+    color: white;
+    margin: 0px;
+}

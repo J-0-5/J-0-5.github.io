@@ -1,0 +1,117 @@
+body{
+    background: url(../img/for.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.encabezado img{
+    text-align: center;
+    width: 100%;
+    height: 325px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none; /* este le coloca a las etiquetas a del html una decoracion null */
+}
+
+nav {
+    padding: 5px;
+    background: white;
+}
+
+.menu {
+    max-width: 750px; /* ancho maximo y no sobre pasa eso */
+    margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+}
+
+.item {
+    display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
+    text-align: center;
+    padding: 10px; /* Relleno a los 4 lados de los LI */
+}
+
+.item a {
+    color: rgb(245, 113, 25);
+    font-weight: bold; /* fuente en negrita */
+}
+
+.item a:hover {
+    background: rgb(250, 226, 190);/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+    padding: 5px;
+    border-radius: 3px;
+}
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    background-color: white;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+p{
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+
+
+form{
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    background: white;
+    border-radius: 10px; /*dar tipo de borde*/
+    top: 10px;
+    margin-bottom: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 20px;
+}
+
+label{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input{
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+select{
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding-right: 9px;
+}
+
+::placeholder{
+    font-size: 11px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background: white;
+    color: rgb(245, 113, 25);
+    padding: 10px;
+}
