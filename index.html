@@ -22,10 +22,23 @@
             <li class="item"><a href="html/factura.html">Factura</a></li>
             <li class="item"><a href="html/chat.html">Chat</a></li>
             <li class="item"><a href="html/contactenos.html">Contactenos</a></li>
+            <ul class="barra">
+                <li class="acceso" onclick="show()"><a>Iniciar sesion</a></li>
+            </ul>
         </ul>
+        
     </nav>
     
-           
+    <div class="log" id="log">
+        <form id="form">
+            <label>E-mail</label><input id="user" type="email" placeholder="someone@example.com">
+            <label>Contraseña</label><input id="password" type="password" placeholder="">
+            <input type="submit">
+        </form>
+        <p id="error"></p>
+        <br>
+        <button onclick="hide()">^</button>
+    </div>       
       
 
 
@@ -96,6 +109,8 @@
 
     <footer>© MercaPlus 2020 <br>
         Todos los derechos reservados</footer>
+
+    <script src="/js/login.js"></script>
 
 </body>
 
