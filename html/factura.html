@@ -25,38 +25,49 @@
     <div class="formulario">
 
         <p>Se requiere que ingrese sus datos personales para efectuar la compra</p>
-        <form>
-            <input type="text" placeholder="Producto"><br><br>
-            <input type="number" placeholder="Precio"><br><br>
-            <input type="number" placeholder="Cantidad"><br><br>
-            <input type="text" placeholder="Primer Nombre">&emsp;&emsp;<input type="text"
-                placeholder="Segundo Nombre"><br><br>
-            <input type="text" placeholder="Primer Apellido">&emsp;&emsp;<input type="text"
-                placeholder="Segundo Apellido"><br><br>
-            <label> Fecha Nacimiento</label><br><br>
-            <input type="date"><br><br>
-            <label>Tipo de documento</label><br><br>
-            <label>Cédula de Ciudadanía</label><input type="radio" name="documento"><label>Cédula de
-                Extranjería</label><input type="radio" name="documento"><br><br>
-            <input type="number" placeholder="Numero de documento"><br><br>
+        <form id="form">
+            <label>Producto</label><br><br>
+            <select id="producto">
+                <option value="Harina PAN">Harina PAN</option>
+                <option value="Chorizo Antioqueño">Chorizo Antioqueño</option>
+                <option value="Tablet Lenovo">Tablet Lenovo</option>
+                <option value="Cámara Canon">Cámara Canon</option>
+            </select>
+            <br><br>
+            <label>Precio unitario</label>
+            <p id="costo"></p>
+            <br><br>
+            <input id="unidades" type="number" placeholder="Cantidad"><br><br>
+            <input id="nombre" type="text" placeholder="Nombre">&emsp;&emsp;<input id="apellido" type="text"
+                placeholder="Apellido"><br><br>
+           
+            <label>Identificacion</label><br><br>
+            <select id="id">
+                <option value="Cedula de ciudadania">CC</option>
+                <option value="Cedula extranjera">CE</option>
+            </select>
+            <input id="documento" type="number" placeholder="Numero de documento"><br><br>
             <label>Metodo de pago</label><br>
-            <select>
-                <option value="">Tarjeta credito</option>
-                <option value="">Tarjeta debito</option>
-                <option value="">Otro</option>
+            <select id="modo">
+                <option value="Tarjeta credito">Tarjeta credito</option>
+                <option value="Tarjeta debito">Tarjeta debito</option>
             </select><br><br>
             <label for="">Numero de cuenta</label><br>
-            <input type="text" placeholder="XXXX XXXX XXXX"><br><br>
-            <input type="tel" placeholder="Telefono"><br><br>
-            <label>Direccion de correo electronico</label><br><br>
-            <input type="email" placeholder="someone@example.com"><br><br>
-            <label for="">¿Desea recibir notificaciones al correo sobre novedades relacionadas al tema?</label><br>
-            <label>Si</label><input type="radio" name="opc">&emsp;&emsp;<label>No</label><input
-                    type="radio" name="opc"><br><br>
+            <input id="num" type="text" placeholder="XXXX XXXX XXXX"><br><br>
+            <input type="submit"><input type="reset">
                     
-                        <input type="submit"><input type="reset">
-                    
-           
+           <table id="mostrar">
+            <thead>
+                <th>Nombre</th>
+                <th>Identificacion</th>
+                <th>Producto</th>
+                <th>Pago</th>
+                <th>Precio total</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+           </table>
             <br><br>
             <label for="contacto">Numero de atencion al cliente:(031) 3489888
                 <br>Correo:sac@tiendasMercPlus.co</label>
@@ -64,10 +75,10 @@
 
     </div>
             
-                    
-           
 
     <footer>© MercaPlus 2020 <br>
         Todos los derechos reservados</footer>
+
+        <script src="../js/factura.js"></script>
 </body>
 </html>
