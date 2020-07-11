@@ -33,14 +33,12 @@ nav {
     background: rgb(245, 113, 25);
 }
 
-.menu {
-    max-width: 750px; /* ancho maximo de 750px y no sobre pasa eso */
-    margin: auto; /* margen automatico de acuerdo el ancho que le pongas de maximo */
+.menu{
+    margin-left: 290px;
 }
 
 .item {
-    display: inline-block; /* Esto es para ponerlo en linea, en un solo bloque */
-    text-align: center;
+    float: left;
     padding: 10px; /* Relleno a los 4 lados de los LI */
 }
 
@@ -50,8 +48,60 @@ nav {
 }
 
 .item a:hover {
+    border-bottom: 2px solid cornsilk;/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+}
+
+.barra{
+    width: 40%;
+    display: inline-block;
+}
+
+li.acceso {
+    float: right;
+    text-align: center;
+    padding: 10px; /* Relleno a los 4 lados de los LI */
+}
+
+li.acceso a {
+    color: white;
+    font-weight: bold; /* fuente en negrita */
+}
+
+li.acceso a:hover {
     padding: 5px;
     border-bottom: 2px solid cornsilk;/* se presenta cuando el usuario coloca el puntero sobre algun elemento*/
+}
+
+.log{
+    float: right;
+    text-align: center;
+    background-color: wheat;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+label{
+    margin: 10px 0;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type=submit] {
+    width: 100%;
+}
+
+input{
+    display: block;
+    margin: 10px 0;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+::placeholder{
+    font-size: 12px;
+    text-align: center;
 }
 
 h1{
