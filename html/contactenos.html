@@ -11,7 +11,7 @@
 
 <body>
     <div class="encabezado"><img src="../img/enc.jpg" alt="MercaPlus"></div>
-
+    <script src="../js/contactenos.js"></script>
     <nav>
         <ul class="menu">
             <li class="item"><a href="../index.html">Inicio</a></li>
@@ -31,22 +31,23 @@
         <div class="contacto">
             <img src="../img/co.jpg" alt="Contactenos">
         </div>
+        
         <div class="formulario">
-            <form>
+             <form id="form">
 
-                <input type="text" placeholder="Primer Nombre">&emsp;&emsp;<input type="text"
-                    placeholder="Segundo Nombre"><br><br>
-                <input type="text" placeholder="Primer Apellido">&emsp;&emsp;<input type="text"
-                    placeholder="Segundo Apellido"><br><br>
+                <input type="text" placeholder="Primer Nombre" id="nombre1">&emsp;&emsp;<input type="text"
+                    placeholder="Segundo Nombre" id="nombre2"><br><br>
+                <input type="text" placeholder="Primer Apellido" id="apellido1">&emsp;&emsp;<input type="text"
+                    placeholder="Segundo Apellido" id="apellido2"><br><br>
                 <label> Fecha Nacimiento</label><br><br>
-                <input type="date"><br><br>
+                <input type="date" id="fechanac"><br><br>
                 <label>Genero</label><br><br>
-                <label>Hombre</label><input type="radio" name="Genero">&emsp;&emsp;<label>Mujer</label><input
-                    type="radio" name="Genero">&emsp;&emsp;<label>Otro</label><input type="radio" name="Genero"><br><br>
+                <label>Hombre</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label>Mujer</label><input
+                    type="radio" name="Genero" id="genero">&emsp;&emsp;<label>Otro</label><input type="radio" name="Genero" id= "genero "><br><br>
                 <label>Tipo de documento</label><br><br>
                 <label>Cédula de Ciudadanía</label><input type="radio" name="documento"><label>Cédula de
                     Extranjería</label><input type="radio" name="documento"><br><br>
-                <input type="number" placeholder="Numero de documento"><br><br>
+                <input type="number" placeholder="Numero de documento" id="nodoc"><br><br>
                 <label>Ciudad</label><br>
                 <select>
                     <option value="">Barranquilla</option>
@@ -56,16 +57,37 @@
                     <option value="">Medellin</option>
                     <option value="">Santa Marta</option>
                 </select><br><br>
-                <input type="text" placeholder="Direccion particular"><br><br>
-                <input type="tel" placeholder="Telefono"><br><br>
+                <input type="text" placeholder="Direccion particular" id="direccion"><br><br>
+                <input type="tel" placeholder="Telefono" id="telefono"><br><br>
                 <label>Direccion de correo electronico</label><br><br>
-                <input type="email" placeholder="someone@example.com"><br>
-                <input type="submit"><input type="reset">
-                <br><br><br>
+                <input type="email" placeholder="someone@example.com" id="email"><br><br>
+                <input type="submit" value="enviar">
+                <br><br>
+                <input type="reset" value="Borrar todo"> 
+                <br><br>
                 <label for="contacto">Numero de atencion al cliente:(031) 3489888
                     <br>Correo:sac@tiendasMercPlus.co</label>
+                <button class="btn_show" id="mostrar">Mostrar</button>
             </form>
-
+            <div>
+                <table class="table_clientes" id="tabla">
+                    
+                    <thead>
+                        <th>Primer nombre</th>
+                        <th>Segundo nombre</th>
+                        <th>Primer apellido</th>
+                        <th>Segundo apellido</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>No. doc</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table> 
+            </div>
         </div>
     </div>
 
