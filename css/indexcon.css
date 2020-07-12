@@ -6,6 +6,7 @@ body{
     background-size: cover;
 }
 
+
 .encabezado img{
 text-align: center;
 width: 100%;
@@ -104,4 +105,9 @@ footer{
     background: white;
     color: rgb(245, 113, 25);
     padding: 10px;
+}
+
+table th, td{
+    border-bottom: 1px solid lightcoral;
+    font-family: 'Times New Roman', Times, serif;
 }
