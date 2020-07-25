@@ -2,97 +2,123 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../css/indexcon.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactenos</title>
     <link rel="icon" type="image/PNG" href="../img/ico.PNG">
 </head>
 
-<body>
-    <div class="encabezado"><img src="../img/enc.jpg" alt="MercaPlus"></div>
-    <script src="../js/contactenos.js"></script>
-    <nav>
-        <ul class="menu">
-            <li class="item"><a href="../index.html">Inicio</a></li>
-            <li class="item"><a href="servicios.html">Servicios</a></li>
-            <li class="item"><a href="premios.html">Premios</a></li>
-            <li class="item"><a href="sucursales.html">Sucursales</a></li>
-            <li class="item"><a href="catalogo.html">Catalogo</a></li>
-            <li class="item"><a href="factura.html">Factura</a></li>
-            <li class="item"><a href="chat.html">Chat</a></li>
-            <li class="item"><a href="contactenos.html">Contactenos</a></li>
-        </ul>
+<body style="background: rgb(250, 182, 56)">
+
+    <div><img src="../img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-justified">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link text-warning" href="../index.html">Inicio<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="premios.html">Premios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="sucursales.html">Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="catalogo.html">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="factura.html">Factura</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="chat.html">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="contactenos.html">Contactenos</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <h1>Contactenos</h1>
+    <h1 class="display-4 mt-4 text-center">Contactenos</h1>
 
-    <div class="campo">
-        <div class="contacto">
-            <img src="../img/co.jpg" alt="Contactenos">
-        </div>
-        
-        <div class="formulario">
-             <form id="form">
-
-                <input type="text" placeholder="Primer Nombre" id="nombre1">&emsp;&emsp;<input type="text"
-                    placeholder="Segundo Nombre" id="nombre2"><br><br>
-                <input type="text" placeholder="Primer Apellido" id="apellido1">&emsp;&emsp;<input type="text"
-                    placeholder="Segundo Apellido" id="apellido2"><br><br>
-                <label> Fecha Nacimiento</label><br><br>
-                <input type="date" id="fechanac"><br><br>
-                <label>Genero</label><br><br>
-                <label>Hombre</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label>Mujer</label><input
-                    type="radio" name="Genero" id="genero">&emsp;&emsp;<label>Otro</label><input type="radio" name="Genero" id= "genero "><br><br>
-                <label>Tipo de documento</label><br><br>
-                <label>Cédula de Ciudadanía</label><input type="radio" name="documento"><label>Cédula de
-                    Extranjería</label><input type="radio" name="documento"><br><br>
-                <input type="number" placeholder="Numero de documento" id="nodoc"><br><br>
-                <label>Ciudad</label><br>
-                <select>
-                    <option value="">Barranquilla</option>
-                    <option value="">Bogota</option>
-                    <option value="">Cali</option>
-                    <option value="">Cartagena</option>
-                    <option value="">Medellin</option>
-                    <option value="">Santa Marta</option>
-                </select><br><br>
-                <input type="text" placeholder="Direccion particular" id="direccion"><br><br>
-                <input type="tel" placeholder="Telefono" id="telefono"><br><br>
-                <label>Direccion de correo electronico</label><br><br>
-                <input type="email" placeholder="someone@example.com" id="email"><br><br>
-                <input type="submit" value="enviar">
-                <br><br>
-                <input type="reset" value="Borrar todo"> 
-                <br><br>
-                <label for="contacto">Numero de atencion al cliente:(031) 3489888
-                    <br>Correo:sac@tiendasMercPlus.co</label>
-                <button class="btn_show" id="mostrar">Mostrar</button>
-            </form>
-            <div>
-                <table class="table_clientes" id="tabla">
-                    
-                    <thead>
-                        <th>Primer nombre</th>
-                        <th>Segundo nombre</th>
-                        <th>Primer apellido</th>
-                        <th>Segundo apellido</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>No. doc</th>
-                        <th>Direccion</th>
-                        <th>Telefono</th>
-                        <th>Email</th>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table> 
+    <div class="container">
+        <div class="row no-gutters mt-5">
+            <div class="col-12 col-lg-7 p-5 bg-light rounded">
+                <img class="rounded mt-5 pt-5 container-fluid" src="../img/co.jpg" alt="Contactenos">
             </div>
+
+            <div class="col-12 col-lg-5 bg-light p-3 rounded">
+                <form class="form-signin mt-5 ml-4" id="form">
+                    <input class="mr-2" type="text" placeholder="Nombre" id="nombre1">
+                    <input type="text" placeholder="Apellido" id="apellido1"><br><br>
+                    <label class="font-weight-bold mr-5"> Fecha Nacimiento</label>
+                    <input type="date" id="fechanac"><br><br>
+                    <label class="font-weight-bold">Genero</label><br>
+                    <label class="mr-2">Hombre</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label
+                        class="mr-2">Mujer</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label
+                        class="mr-2">Otro</label><input type="radio" name="Genero" id="genero "><br><br>
+                    <label class="font-weight-bold">Tipo de documento</label><br>
+                    <label class="mr-2">Cédula de Ciudadanía</label><input class="mr-3" type="radio"
+                        name="documento"><label class="mr-2">Cédula de
+                        Extranjería</label><input type="radio" name="documento"><br>
+                    <input type="number" placeholder="Numero de documento" id="nodoc"><br><br>
+                    <label class="font-weight-bold mr-5">Ciudad</label>
+                    <select>
+                        <option value="">Barranquilla</option>
+                        <option value="">Bogota</option>
+                        <option value="">Cali</option>
+                        <option value="">Cartagena</option>
+                        <option value="">Medellin</option>
+                        <option value="">Santa Marta</option>
+                    </select><br><br>
+                    <input type="text" placeholder="Direccion particular" id="direccion"><br><br>
+                    <input type="tel" placeholder="Telefono" id="telefono"><br><br>
+                    <label class="font-weight-bold">Direccion de correo electronico</label><br>
+                    <input type="email" placeholder="someone@example.com" id="email"><br><br>
+                    <input class="btn btn-warning btn-sm" type="submit" value="enviar">
+                    <input class="btn btn-warning btn-sm" type="reset" value="Borrar todo">
+                    <br><br>
+                    <button class="btn btn-warning btn-sm" id="mostrar">Mostrar</button>
+                </form>
+                <div>
+                    <table id="tabla">
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>No. doc</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <footer>© MercaPlus 2020 <br>
+    <footer class="blockquote-footer bg-light text-center mt-4">© MercaPlus 2020 <br>
         Todos los derechos reservados</footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.1.11.1.js"></script>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

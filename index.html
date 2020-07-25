@@ -2,116 +2,189 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/indextyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MercaPlus</title>
     <link rel="icon" type="image/PNG" href="img/ico.PNG">
 </head>
 
-<body>
-    <div class="encabezado"><img src="img/enc.jpg" alt="MercaPlus"></div>
-
-    <nav>
-        <ul class="menu">
-            <li class="item"><a href="index.html">Inicio</a></li>
-            <li class="item"><a href="html/servicios.html">Servicios</a></li>
-            <li class="item"><a href="html/premios.html">Premios</a></li>
-            <li class="item"><a href="html/sucursales.html">Sucursales</a></li>
-            <li class="item"><a href="html/catalogo.html">Catalogo</a></li>
-            <li class="item"><a href="html/factura.html">Factura</a></li>
-            <li class="item"><a href="html/chat.html">Chat</a></li>
-            <li class="item"><a href="html/contactenos.html">Contactenos</a></li>
-            <ul class="barra">
-                <li class="acceso" onclick="show()"><a>Iniciar sesion</a></li>
-            </ul>
-        </ul>
-        
-    </nav>
-    
-    <div class="log" id="log">
-        <form id="form">
-            <label>E-mail</label><input id="user" type="email" placeholder="someone@example.com">
-            <label>Contraseña</label><input id="password" type="password" placeholder="">
-            <input type="submit">
-        </form>
-        <p id="error"></p>
-        <br>
-        <button onclick="hide()">^</button>
-    </div>       
-      
+<body style="background: gainsboro">
 
 
-
-
-    <marquee behavior="alternate">
-        <h1>MercaPlus / ¿Quiénes somos?</h1>
-    </marquee>
-    <h2>Nuestros Negocios</h2>
-    <section>
-        <article>
-            <p>Creemos que somos uno de los principales minoristas multi-marca de <b>Colombia</b>. Operamos a través de
-                una
-                serie
-                de formatos, incluyendo supermercados, tiendas de mejoramiento del hogar, centros comerciales, tiendas
-                por
-                departamento y retail financiero en la mayoría de los países. Nuestras oficinas centrales están basadas
-                en
-                <i>Barranquilla</i> y tenemos operaciones en <i>Santa Marta</i> y <i>Cartagena</i>, mercados en los que
-                MercaPlus
-                inició y consolidó su
-                posición de liderazgo.</p>
-        </article>
-        <article>
-            <p>MercaPlus gestiona su cadena de valor a través de un modelo de negocio basado en cuatro pilares:
-                desarrollo del
-                entorno, gestión del cambio climático, desarrollo de colaboradores y oferta sostenible, los que le han
-                permitido
-                integrar la sostenibilidad en su modelo de negocio. MercaPlus cumple con su misión de contribuir a
-                mejorar la
-                calidad de vida de sus clientes, colaboradores y la comunidad donde está inserta. Entiende que no solo
-                crecerá
-                como negocio, sino que apoyará a las comunidades donde está para afrontar los principales desafíos del
-                cambio
-                climático. Por ello, la Compañía está convencida de que el valor que crea debe traducirse en beneficio
-                para
-                todos sus grupos de interés.</p>
-        </article>
-    </section>
-
-
-    <h2>Lo Nuestro es al Detalle</h2>
-
-
-    <div class="ultimo">
-
-       <div class="parrafo">
-            <p>En MercaPlus trabajamos diariamente con pasión, respeto, transparencia y confianza para mejorar la calidad de
-                vida
-                de nuestros clientes a través de una experiencia única, sostenible y con estándares inigualables de calidad
-                en
-                sus productos y servicios. </p>
-<br>
-            <p>Para complementar nuestra actividad principal de comercio minorista, estamos involucrados en el negocio
-                inmobiliario, a través de sucursales en <i>Cali</i>, <i>Bogota</i> y <i>Medellin</i> con 40 centros
-                comerciales y 2 terrenos que representan 382.433 metros cuadrados de superficie bruta arrendable a terceros
-                al
-                31 de junio de 2020. Asimismo,
-                ofrecemos tarjetas de crédito, préstamos de consumo y servicios financieros limitados a nuestros clientes.
-            </p>
-       </div>
-
-        <div class="video">
-            <iframe width="480px" height="250px" src="https://www.youtube.com/embed/FfkUe2Ihemw" frameborder="0"></iframe>
+    <!-- Modal -->
+    <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenteredLabel">Iniciar sesion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="log">
+                        <form id="form" class="form-signin">
+                            <label class="m-3 h5 font-weight-normal">E-mail</label>
+                            <input class="form-control" id="user" type="email" placeholder="someone@example.com">
+                            <label class="m-3 h5 font-weight-normal">Contraseña</label>
+                            <input class="form-control" id="password" type="password" placeholder="">
+                            <input class="btn btn-lg btn-primary btn-block mt-3" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <br><br>
 
-    <footer>© MercaPlus 2020 <br>
-        Todos los derechos reservados</footer>
 
-    <script src="/js/login.js"></script>
 
+
+
+
+    <div><img src="img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning nav-justified">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/premios.html">Premios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/sucursales.html">Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/catalogo.html">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/factura.html">Factura</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/chat.html">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/contactenos.html">Contactenos</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Button trigger modal -->
+        <button onclick="show()" type="button" class="btn btn-warning float-right" data-toggle="modal"
+            data-target="#exampleModalCentered">
+            Iniciar sesion
+        </button>
+    </nav>
+
+    <marquee class="mt-3" behavior="alternate">
+        <h1>MercaPlus / ¿Quiénes somos?</h1>
+    </marquee>
+
+    <div class="container mt-3">
+        <div class="row no-gutters">
+            <div class="col-12 col-lg-12 mb-4">
+                <h2>Nuestros Negocios</h2>
+                <section>
+                    <article>
+                        <p>Creemos que somos uno de los principales minoristas multi-marca de <b>Colombia</b>. Operamos
+                            a través de
+                            una
+                            serie
+                            de formatos, incluyendo supermercados, tiendas de mejoramiento del hogar, centros
+                            comerciales, tiendas
+                            por
+                            departamento y retail financiero en la mayoría de los países. Nuestras oficinas centrales
+                            están basadas
+                            en
+                            <i>Barranquilla</i> y tenemos operaciones en <i>Santa Marta</i> y <i>Cartagena</i>, mercados
+                            en los que
+                            MercaPlus
+                            inició y consolidó su
+                            posición de liderazgo.</p>
+                    </article>
+                    <article>
+                        <p>MercaPlus gestiona su cadena de valor a través de un modelo de negocio basado en cuatro
+                            pilares:
+                            desarrollo del
+                            entorno, gestión del cambio climático, desarrollo de colaboradores y oferta sostenible, los
+                            que le han
+                            permitido
+                            integrar la sostenibilidad en su modelo de negocio. MercaPlus cumple con su misión de
+                            contribuir a
+                            mejorar la
+                            calidad de vida de sus clientes, colaboradores y la comunidad donde está inserta. Entiende
+                            que no solo
+                            crecerá
+                            como negocio, sino que apoyará a las comunidades donde está para afrontar los principales
+                            desafíos del
+                            cambio
+                            climático. Por ello, la Compañía está convencida de que el valor que crea debe traducirse en
+                            beneficio
+                            para
+                            todos sus grupos de interés.</p>
+                    </article>
+                </section>
+            </div>
+        </div>
+
+        <div class="row no-gutters mt-3">
+            <div class="col-12 col-lg-6 mb-3">
+                <h2>Lo Nuestro es al Detalle</h2>
+                <div class="mr-2">
+                    <p>En MercaPlus trabajamos diariamente con pasión, respeto, transparencia y confianza para mejorar
+                        la
+                        calidad de
+                        vida
+                        de nuestros clientes a través de una experiencia única, sostenible y con estándares inigualables
+                        de
+                        calidad
+                        en
+                        sus productos y servicios. </p>
+                    
+                    <p>Para complementar nuestra actividad principal de comercio minorista, estamos involucrados en el
+                        negocio
+                        inmobiliario, a través de sucursales en <i>Cali</i>, <i>Bogota</i> y <i>Medellin</i> con 40
+                        centros
+                        comerciales y 2 terrenos que representan 382.433 metros cuadrados de superficie bruta arrendable
+                        a
+                        terceros
+                        al
+                        31 de junio de 2020. Asimismo,
+                        ofrecemos tarjetas de crédito, préstamos de consumo y servicios financieros limitados a nuestros
+                        clientes.
+                    </p>
+                </div>
+            </div>
+            <div class="col-10 col-lg-6  embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FfkUe2Ihemw"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+        <footer class="blockquote-footer bg-warning text-center mt-5">© MercaPlus 2020 <br>
+            Todos los derechos reservados</footer>
+
+    <script src="js/login.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.1.11.1.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

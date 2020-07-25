@@ -17,6 +17,10 @@ const opciones = [
     }
 ]
 
+div = document.getElementById('show');
+    div.style.display = 'none';
+
+
 const producto = document.getElementById('producto')
 const costo = document.getElementById('costo')
 const unidades = document.getElementById('unidades')
@@ -66,6 +70,9 @@ form.addEventListener('submit',(e) =>{
         Pago: modo+" "+num.value,
         Precio_total: total 
     }
+
+    div = document.getElementById('show');
+    div.style.display = '';
 
     localStorage.setItem('cuentas', JSON.stringify(factura));
     const variables = JSON.parse(localStorage.getItem('cuentas'))

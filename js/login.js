@@ -23,17 +23,18 @@ const usuarios =  JSON.parse(localStorage.getItem('cuentas'));
 const user = document.getElementById('user') 
 const password = document.getElementById('password')
 const form = document.getElementById('form')
+
 form.addEventListener('submit',(e) =>{
     e.preventDefault()
     
     for(i=0;i<usuarios.length;i++){
         if(usuarios[i].correo==user.value &&usuarios[i].contraseña==password.value){
             alert("Bienvenido: "+usuarios[i].tipo+" "+usuarios[i].nombre+" "+usuarios[i].apellido )
-            var div = document.getElementById('log');
-            div.style.display = 'none';
-        }else{
-            error.innerHTML = `Datos erroneos`;
+            break
         }
+    }
+    if(i==usuarios.length){
+        alert("Datos erroneos")
     }
 });
 
