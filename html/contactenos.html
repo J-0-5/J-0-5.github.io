@@ -8,11 +8,11 @@
     <title>Contactenos</title>
     <link rel="icon" type="image/PNG" href="../img/ico.PNG">
 </head>
-
+    
 <body style="background: rgb(250, 182, 56)">
-
-    <div><img src="../img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
-
+    
+    <div class="d-none d-sm-none d-md-block"><img src="../img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-justified">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -54,62 +54,104 @@
     <h1 class="display-4 mt-4 text-center">Contactenos</h1>
 
     <div class="container">
-        <div class="row no-gutters mt-5">
-            <div class="col-12 col-lg-7 p-5 bg-light rounded">
-                <img class="rounded mt-5 pt-5 container-fluid" src="../img/co.jpg" alt="Contactenos">
-            </div>
-
-            <div class="col-12 col-lg-5 bg-light p-3 rounded">
-                <form class="form-signin mt-5 ml-4" id="form">
-                    <input class="mr-2" type="text" placeholder="Nombre" id="nombre1">
-                    <input type="text" placeholder="Apellido" id="apellido1"><br><br>
-                    <label class="font-weight-bold mr-5"> Fecha Nacimiento</label>
-                    <input type="date" id="fechanac"><br><br>
-                    <label class="font-weight-bold">Genero</label><br>
-                    <label class="mr-2">Hombre</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label
-                        class="mr-2">Mujer</label><input type="radio" name="Genero" id="genero">&emsp;&emsp;<label
-                        class="mr-2">Otro</label><input type="radio" name="Genero" id="genero "><br><br>
-                    <label class="font-weight-bold">Tipo de documento</label><br>
-                    <label class="mr-2">Cédula de Ciudadanía</label><input class="mr-3" type="radio"
-                        name="documento"><label class="mr-2">Cédula de
-                        Extranjería</label><input type="radio" name="documento"><br>
-                    <input type="number" placeholder="Numero de documento" id="nodoc"><br><br>
-                    <label class="font-weight-bold mr-5">Ciudad</label>
-                    <select>
-                        <option value="">Barranquilla</option>
-                        <option value="">Bogota</option>
-                        <option value="">Cali</option>
-                        <option value="">Cartagena</option>
-                        <option value="">Medellin</option>
-                        <option value="">Santa Marta</option>
-                    </select><br><br>
-                    <input type="text" placeholder="Direccion particular" id="direccion"><br><br>
-                    <input type="tel" placeholder="Telefono" id="telefono"><br><br>
-                    <label class="font-weight-bold">Direccion de correo electronico</label><br>
-                    <input type="email" placeholder="someone@example.com" id="email"><br><br>
-                    <input class="btn btn-warning btn-sm" type="submit" value="enviar">
-                    <input class="btn btn-warning btn-sm" type="reset" value="Borrar todo">
-                    <br><br>
-                    <button class="btn btn-warning btn-sm" id="mostrar">Mostrar</button>
-                </form>
-                <div>
-                    <table id="tabla">
-                        <thead>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Fecha de Nacimiento</th>
-                            <th>No. doc</th>
-                            <th>Direccion</th>
-                            <th>Telefono</th>
-                            <th>Email</th>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+        
+        <div class="row no-gutters mt-5 bg-light rounded">
+                <div class="col-lg-7 col-xl-7 d-none d-sm-none d-md-none d-lg-block p-5 bg-light rounded">
+                    <img class="rounded mt-5 pt-5 container-fluid" src="../img/co.jpg" alt="Contactenos">
                 </div>
-            </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 bg-light jumbotron rounded">
+                     <form class="form-signin m-4 " id="form">
+        
+                        <input class="form-control text-center" type="text" placeholder="Nombre" id="nombre1">
+                        <br>
+                        <input class="form-control text-center" type="text" placeholder="Apellido" id="apellido1">
+        
+                        <br>
+                        <label class="text-monospace mr-5"> Fecha Nacimiento</label>
+                            <div class="form-inline">
+        
+                            <input class="float-leftt form-control mr-2" type="date" id="fechanac">
+                            </div>
+                        <br>
+                        <label class="text-monospace mr-5"> Género</label>
+                        
+                            <div class="form-inline">
+                                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                    <label class="btn btn-warning active"><input type="radio" name="Genero"
+                                            id="genero">Hombre</label>
+                                    <label class="btn btn-warning active"><input type="radio" name="Genero"
+                                            id="genero">Mujer</label>
+                                    <label class="btn btn-warning active"><input type="radio" name="Genero"
+                                        id="genero">Otro</label>
+                                 </div>
+                            </div>
+                        <br>
+        
+                        <label class="text-monospace">Tipo de documento</label>
+                        <div class="btn-group btn-group-toggle">
+                            <label class="btn btn-warning active"><input type="radio" name="documento">Cédula de Ciudadanía</label>
+                            <label class="btn btn-warning active"><input type="radio" name="documento">Cédula de Extranjería</label>
+                        </div>
+                        <br><br>
+        
+                        <input class="form-control text-center" type="number" placeholder="Numero de documento" id="nodoc">
+        
+                        <br>
+        
+                        <div class="form-inline">
+                            <label class="text-monospace">Ciudad</label>
+                            <select class="custom-select">
+                                <option value="">Barranquilla</option>
+                                <option value="">Bogota</option>
+                                <option value="">Cali</option>
+                                <option value="">Cartagena</option>
+                                <option value="">Medellin</option>
+                                <option value="">Santa Marta</option>
+                            </select>
+                        </div>
+                        <br>
+        
+                        <input class="form-control" type="text" placeholder="Direccion particular" id="direccion">
+        
+                        <br>
 
+                        <input class="form-control" type="tel" placeholder="Telefono" id="telefono">
+
+                        <br>
+            
+                        <label class="text-monospace">Direccion de correo electronico</label><br>
+            
+                        <input class="form-control" type="email" placeholder="someone@example.com" id="email">
+            
+                        <br>
+                        <div class="d-flex justify-content-around">
+                            <input class="btn btn-warning btn-sm" type="submit" value="enviar">
+                            <input class="btn btn-warning btn-sm" type="reset" value="Borrar todo">
+                            
+                        </div>
+                    </form>
+                    <div id= "show">
+                        <table id="mostrar" class="table table-sm">
+                            <thead>
+                                <tr> 
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>No. doc</th>
+                                    <th>Direccion</th>
+                                    <th>Telefono</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>    
         </div>
+     
     </div>
 
     <footer class="blockquote-footer bg-light text-center mt-4">© MercaPlus 2020 <br>
@@ -119,6 +161,7 @@
     <script src="../js/jquery.1.11.1.js"></script>
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/contactenos.js"></script>
 </body>
 
 </html>

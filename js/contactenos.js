@@ -1,65 +1,61 @@
 window.onload = function (){
+    div = document.getElementById('show');
+    div.style.display = 'none';
+
     const form = document.getElementById("form"),
     nombre1 = document.getElementById("nombre1"),
     apellido1 = document.getElementById("apellido1"),
-    fechanac = document.getElementById("fechanac"), 
     direccion = document.getElementById("direccion"), 
     cedula = document.getElementById("nodoc"),
     telefono = document.getElementById("telefono"),
-    email = document.getElementById("email"),
     mostrar = document.getElementById("mostrar"); 
     const clientes = []
 
+
+
     form.addEventListener("submit", (event) => {
         event.preventDefault(); 
-   
-        const newclient = {
-            nombre1: nombre1.value,
+        const nuevocliente = {
+            nombre1 : nombre1.value,
             apellido1: apellido1.value, 
-            fechanac: fechanac.value,
-            direccion: direccion.value,
             cedula: cedula.value,
+            direccion : direccion.value, 
             telefono: telefono.value,
-            email: email.value 
-        
-        }
-    
-        clientes.push(newclient);
-        localStorage.setItem('table', JSON.stringify(clientes))
-     
-    } )
+            
+    } 
+    div = document.getElementById('show');
+    div.style.display = '';
 
+    clientes.splice(0,0,nuevocliente)
+    localStorage.setItem('listclientes', JSON.stringify(clientes))
+
+    tbody = document.querySelector('#mostrar tbody')
     mostrar.addEventListener('click', () => {
-        const clientesArray = JSON.parse(localStorage.getItem('table')),
-        tbody = document.querySelector('#tabla tbody')
+    let fila = tbody.insertRow(0),
+    nombre1 = fila.insertCell(0),
+    apellido1 = fila.insertCell(1),
+    cedula = fila.insertCell(2), 
+    direccion = fila.insertCell(3),
+    telefono = fila.insertCell(4)
+    eliminar = fila.insertCell(5)
+
+
+    nombre1.innerHTML = nuevocliente.nombre1;
+    apellido1.innerHTML = nuevocliente.apellido1;
+    cedula.innerHTML = nuevocliente.cedula;
+    direccion.innerHTML = nuevocliente.direccion;
+    telefono.innerHTML = nuevocliente.telefono;
+    eliminar.innerHTML ='<button id="btn" name="btn" onclick="delRow(this)" > Delete</button>';
+    }); 
+
+ 
+    function delRow(currElement) {
+        var parentRowIndex = currElement.parentNode.parentNode.rowIndex;
+        document.getElementById("mostrar").deleteRow(parentRowIndex);
+        clientes.splice(parentRowIndex-1,1);
+        localStorage.setItem('table', JSON.stringify(clientes));
+    } 
     
-        if (clientesArray == null) {
-            mensaje.innerHTML = "No hay clientes"
-
-         } else {
-                clientesArray.map(element => {
-                    let fila = tbody.insertRow(0),
-                    nombre1 = fila.insertCell(0),
-                    apellido1 = fila.insertCell(1),
-                    fechanac = fila.insertCell(2),
-                    cedula = fila.insertCell(3), 
-                    direccion = fila.insertCell(4),
-                    telefono = fila.insertCell(5), 
-                    email = fila.insertCell(6)
-
-
-                nombre1.innerHTML = element.nombre1;
-                apellido1.innerHTML = element.apellido1;
-                fechanac.innerHTML = element.fechanac; 
-                cedula.innerHTML = element.cedula;
-                direccion.innerHTML = element.direccion;
-                telefono.innerHTML = element.telefono;
-                email.innerHTML = element.email; 
-            
-    
-        })
-            
-        
-    }
 })
-}
+} 
+

@@ -43,7 +43,7 @@
 
 
 
-    <div><img src="img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
+    <div class="d-none d-sm-none d-md-block"><img src="img/enc.jpg" alt="MercaPlus" width="100%" height="100%"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-warning nav-justified">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -71,12 +71,6 @@
                     <a class="nav-link" href="html/catalogo.html">Catalogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="html/factura.html">Factura</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="html/chat.html">Chat</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="html/contactenos.html">Contactenos</a>
                 </li>
             </ul>
@@ -87,10 +81,12 @@
             Iniciar sesion
         </button>
     </nav>
-
-    <marquee class="mt-3" behavior="alternate">
-        <h1>MercaPlus / ¿Quiénes somos?</h1>
-    </marquee>
+    <div class="d-none d-sm-none d-md-block">
+        <marquee class="mt-3" behavior="alternate">
+            <h1>MercaPlus / ¿Quiénes somos?</h1>
+        </marquee>
+    </div>
+   
 
     <div class="container mt-3">
         <div class="row no-gutters">
@@ -167,17 +163,14 @@
                     </p>
                 </div>
             </div>
-            <div class="col-10 col-lg-6  embed-responsive embed-responsive-16by9">
+            <div class="col-lg-6 col-xl-6 d-none d-sm-none d-md-none d-lg-block embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FfkUe2Ihemw"
                     frameborder="0"></iframe>
             </div>
         </div>
     </div>
-
-
-
    
-        <footer class="blockquote-footer bg-warning text-center mt-5">© MercaPlus 2020 <br>
+        <footer class="blockquote-footer text-light bg-warning text-center mt-5">© MercaPlus 2020 <br>
             Todos los derechos reservados</footer>
 
     <script src="js/login.js"></script>

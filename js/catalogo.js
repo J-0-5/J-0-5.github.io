@@ -24,23 +24,16 @@ div = document.getElementById('show');
 
 const producto = document.getElementById('producto')
 const unidades = document.getElementById('unidades')
-const nombre = document.getElementById('nombre')
-const apellido = document.getElementById('apellido')
 
-const id = document.getElementById('id')
-id.addEventListener('change',(e) =>{
-    localStorage.setItem('var',e.target.value);
-})
+
 
 const documento = document.getElementById('documento')
-
 const modo = document.getElementById('modo')
 modo.addEventListener('change',(e) =>{
     localStorage.setItem('mode',e.target.value);
 })
 
 const num = document.getElementById('num')
-
 producto.addEventListener('change',(e) =>{
     e.preventDefault()
     for(i=0;i<opciones.length;i++){
@@ -52,26 +45,53 @@ producto.addEventListener('change',(e) =>{
     }
     
 })
+function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+
+var domicilio = 0
+
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        domicilio = 15000;
+    } else {
+        domicilio = 0;
+    }
+  }
+
+
 
 const form = document.getElementById('form')
 const mostrar = document.getElementById('mostrar')
 
 form.addEventListener('submit',(e) =>{
     e.preventDefault()
+    
     const product = localStorage.getItem('nom')
-    const ide =  localStorage.getItem('var');
     const modo = localStorage.getItem('mode');
     const precio = localStorage.getItem('precio');
-    const total = precio * unidades.value;
+    const total = precio * unidades.value + domicilio;
     const factura = {
-        Cliente: nombre.value +" "+ apellido.value,
-        Identificacion: ide,
         numero: documento.value,
         Producto: product,
+        cantidad: unidades.value,
         Pago: modo+" "+num.value,
         Precio_total: total 
     }
 
+    
     div = document.getElementById('show');
     div.style.display = '';
 
@@ -81,18 +101,17 @@ form.addEventListener('submit',(e) =>{
 
     tbody = document.querySelector('#mostrar tbody')
     let fila = tbody.insertRow(0),
-                Cliente = fila.insertCell(0),
-                Identificacion = fila.insertCell(1),
-                Numero = fila.insertCell(2)
-                Producto = fila.insertCell(3),
-                Pago = fila.insertCell(4),
-                Precio_total = fila.insertCell(5)
-                boton = fila.insertCell(6);
+               
+                Numero = fila.insertCell(0)
+                Producto = fila.insertCell(1),
+                Cantidad = fila.insertCell(2)
+                Pago = fila.insertCell(3),
+                Precio_total = fila.insertCell(4)
+                boton = fila.insertCell(5);
 
-                Cliente.innerHTML = factura.Cliente
-                Identificacion.innerHTML = factura.Identificacion
                 Numero.innerHTML = factura.numero
                 Producto.innerHTML = factura.Producto
+                Cantidad.innerHTML = factura.cantidad
                 Pago.innerHTML = factura.Pago
                 Precio_total.innerHTML = factura.Precio_total
                 boton.innerHTML ='<button id="btn" name="btn" onclick="delRow(this)" > Delete</button>';
@@ -105,7 +124,3 @@ function delRow(currElement) {
     registro.splice(parentRowIndex-1,1);
     localStorage.setItem('cuentas', JSON.stringify(registro));
 }
-
-
-
-
